@@ -1,0 +1,6 @@
+name: UHCRun
+main: com.galli24.uhcrun.UHCRun
+version: 0.1 Beta
+load: STARTUP
+commands:
+  uhcrun: 
