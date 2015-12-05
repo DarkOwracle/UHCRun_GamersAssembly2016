@@ -117,7 +117,7 @@ public final class UHCRun extends JavaPlugin
 			if(args.length > 0){
 				if(args[0].equalsIgnoreCase("start")){
 					if(started || !setup){
-						sender.sendMessage(frFR ? "[UHCRun] Erreur, le jeu est deja en cours ou alors vous avez oubliez de faire la commande /uhcrun setup." : "[UHCRun] Error, the game is either in progress or the /uhcrun setup command hasn't been used.");
+						sender.sendMessage(frFR ? "[GA UHC] Erreur, le jeu est deja en cours ou alors vous avez oubliez de faire la commande /uhcrun setup." : "[GA UHC Error, the game is either in progress or the /uhcrun setup command hasn't been used.");
 						return false;
 					}
 
@@ -281,7 +281,7 @@ public final class UHCRun extends JavaPlugin
 					}, 0L, 20L);
 				}else if(args[0].equalsIgnoreCase("setup")){
 					if(setup){
-						sender.sendMessage(frFR ? "[UHCRun] La configuration a deja été faite." : "[UHCRun] The setup has already been completed.");
+						sender.sendMessage(frFR ? "[GA UHC] La configuration a deja été faite." : "[GA UHC] The setup has already been completed.");
 						return false;
 					}
 					this.board = Bukkit.getServer().getScoreboardManager().getNewScoreboard();
@@ -306,7 +306,7 @@ public final class UHCRun extends JavaPlugin
 					languageInventory.setItem(0, setItemNameAndLore(new ItemStack(Material.WOOL, 1, DyeColor.WHITE.getData()), ChatColor.WHITE + "English", new String[]{}));
 					languageInventory.setItem(1, setItemNameAndLore(new ItemStack(Material.WOOL, 1, DyeColor.BLACK.getData()), ChatColor.WHITE + "Fran�ais", new String[]{}));
 					setupSender.openInventory(languageInventory);
-					sender.sendMessage("[UHCRun] Please select a language.");
+					sender.sendMessage("[GA UHC] Please select a language.");
 					
 					partialSetup = true;
 				}else if(args[0].equalsIgnoreCase("solo")){
@@ -1196,6 +1196,6 @@ public final class UHCRun extends JavaPlugin
 		world = setupSender.getWorld();
 		
 		setup = true;
-		setupSender.sendMessage(frFR ? "[UHCRun] Configuration terminée" : "[UHCRun] Setup complete");
+		setupSender.sendMessage(frFR ? "[GA UHC] Configuration terminée" : "[GA UHC] Setup complete");
 	}
 }
